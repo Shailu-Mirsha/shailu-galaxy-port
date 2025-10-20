@@ -124,7 +124,7 @@ const Contact = () => {
       }} viewport={{
         once: true
       }} className="text-center mt-12 text-muted-foreground">
-          <p>© 2024 Shailu Mirsha. Built with Passion and Imagination
+          <p>©2025 Shailu Mirsha. Built with Passion and Dedication
 
         </p>
         </motion.div>

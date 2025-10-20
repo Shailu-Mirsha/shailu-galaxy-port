@@ -56,11 +56,11 @@ const Resume = () => {
 
           <div className="grid md:grid-cols-3 gap-6 pt-8">
             <div className="card-glass rounded-2xl p-6">
-              <div className="text-4xl font-bold text-gradient mb-2">5+</div>
+              <div className="text-4xl font-bold text-gradient mb-2">2</div>
               <div className="text-muted-foreground">Projects Completed</div>
             </div>
             <div className="card-glass rounded-2xl p-6">
-              <div className="text-4xl font-bold text-gradient mb-2">6+</div>
+              <div className="text-4xl font-bold text-gradient mb-2">3+</div>
               <div className="text-muted-foreground">Technical Skills</div>
             </div>
             <div className="card-glass rounded-2xl p-6">

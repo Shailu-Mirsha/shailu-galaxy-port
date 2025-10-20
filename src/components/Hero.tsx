@@ -1,7 +1,10 @@
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { ArrowDown } from "lucide-react";
 
 const Hero = () => {
+  const [imgError, setImgError] = useState(false);
+
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative pt-20 px-6">
       <div className="max-w-7xl mx-auto w-full grid md:grid-cols-2 gap-12 items-center">
@@ -86,16 +89,25 @@ const Hero = () => {
             transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
             className="absolute inset-0 bg-gradient-to-r from-primary via-accent to-secondary rounded-full blur-3xl opacity-30"
           />
-          
+
           <motion.div
             whileHover={{ scale: 1.05 }}
             className="relative w-full aspect-square max-w-md mx-auto card-glass rounded-full p-2"
           >
             <div className="w-full h-full rounded-full bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center overflow-hidden">
-              {/* Placeholder for profile image - user can replace this */}
-              <div className="w-full h-full bg-gradient-to-br from-primary/40 to-accent/40 flex items-center justify-center text-8xl font-bold text-gradient">
-                SM
-              </div>
+              {/* Use public image at /profile.jpg with fallback */}
+              {!imgError ? (
+                <img
+                  src="/profile.jpg"
+                  alt="Shailu Mirsha"
+                  onError={() => setImgError(true)}
+                  className="w-full h-full object-cover rounded-full"
+                />
+              ) : (
+                <div className="w-full h-full bg-gradient-to-br from-primary/40 to-accent/40 flex items-center justify-center text-8xl font-bold text-gradient rounded-full">
+                  SM
+                </div>
+              )}
             </div>
           </motion.div>
         </motion.div>
