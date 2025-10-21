@@ -2,10 +2,10 @@ import { motion } from "framer-motion";
 
 const Skills = () => {
   const skills = [
-    { name: "HTML", level: 60, color: "from-orange-500 to-red-500" },
-    { name: "Python", level: 65, color: "from-blue-500 to-yellow-500" },
+    { name: "HTML", level: 50, color: "from-orange-500 to-red-500" },
+    { name: "Python", level: 50, color: "from-blue-500 to-yellow-500" },
     { name: "UI/UX Design", level: 80, color: "from-purple-500 to-pink-500" },
-    { name: "CSS", level: 50, color: "from-blue-400 to-purple-500" },
+    { name: "CSS", level: 40, color: "from-blue-400 to-purple-500" },
   ];
 
   return (

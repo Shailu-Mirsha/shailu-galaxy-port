@@ -1,5 +1,5 @@
-import { motion } from "framer-motion";
-import { Home, User, Briefcase, Code, FileText, Mail } from "lucide-react";
+import React from "react";
+import { Home, User, Briefcase, Code, Mail } from "lucide-react";
 
 const Navigation = () => {
   const navItems = [
@@ -7,7 +7,6 @@ const Navigation = () => {
     { name: "About", href: "#about", icon: User },
     { name: "Projects", href: "#projects", icon: Briefcase },
     { name: "Skills", href: "#skills", icon: Code },
-    { name: "Resume", href: "#resume", icon: FileText },
     { name: "Contact", href: "#contact", icon: Mail },
   ];
 
@@ -19,23 +18,18 @@ const Navigation = () => {
             <a href="#home">SM</a>
           </div>
 
-          {/* Desktop nav with icons (unchanged) */}
           <div className="hidden md:flex items-center gap-8">
             {navItems.map((item) => (
-              <motion.a
+              <a
                 key={item.name}
                 href={item.href}
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.95 }}
                 className="text-foreground/80 hover:text-foreground transition-colors flex items-center gap-2"
               >
                 <item.icon size={18} />
                 <span>{item.name}</span>
-              </motion.a>
+              </a>
             ))}
           </div>
-
-          {/* mobile menu button removed */}
         </div>
       </div>
     </nav>

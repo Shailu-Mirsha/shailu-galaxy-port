@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { ArrowDown } from "lucide-react";
+import ParticlesBG from "./ParticlesBG";
 
 const Hero = () => {
   const [imgError, setImgError] = useState(false);
