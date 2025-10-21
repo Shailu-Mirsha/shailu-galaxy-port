@@ -12,21 +12,14 @@ const Navigation = () => {
   ];
 
   return (
-    <motion.nav
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 0.5 }}
-      className="fixed top-0 left-0 right-0 z-50 px-6 py-4"
-    >
+    <nav className="fixed top-0 left-0 right-0 z-50 px-6 py-4">
       <div className="max-w-7xl mx-auto">
         <div className="card-glass rounded-full px-8 py-4 flex items-center justify-between">
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            className="text-2xl font-bold text-gradient"
-          >
-            SM
-          </motion.div>
-          
+          <div className="text-2xl font-bold text-gradient">
+            <a href="#home">SM</a>
+          </div>
+
+          {/* Desktop nav with icons (unchanged) */}
           <div className="hidden md:flex items-center gap-8">
             {navItems.map((item) => (
               <motion.a
@@ -42,29 +35,10 @@ const Navigation = () => {
             ))}
           </div>
 
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="md:hidden text-foreground"
-            aria-label="Menu"
-          >
-            <svg
-              className="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M4 6h16M4 12h16M4 18h16"
-              />
-            </svg>
-          </motion.button>
+          {/* mobile menu button removed */}
         </div>
       </div>
-    </motion.nav>
+    </nav>
   );
 };
 
