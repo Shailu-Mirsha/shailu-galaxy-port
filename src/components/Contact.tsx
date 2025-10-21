@@ -171,7 +171,7 @@ const Contact = () => {
           className="text-center mt-12 text-muted-foreground"
         >
           <p>
-            ©2025 Shailu Mirsha. Built with Passion and Dedication
+            ©2025 Shailu Mirsha. Where code meets creativity. Crafted with Passion.
           </p>
         </motion.div>
       </div>
